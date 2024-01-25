@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Home } from './Components/Home'
 import Navbar from './Components/Navbar'
+import { Routes, Route } from 'react-router-dom';
 export default function App() {
   const [input, setInput] = useState('');
 
@@ -8,9 +9,11 @@ export default function App() {
     setInput(value);
   };
   return (
-    <div>
-      <Navbar />
-      <Home/>
-    </div>
+    <Routes>
+      
+      <Route path='/' element={<Navbar/>}/>
+      <Route path='/:category' element={<Home/>}/>
+
+       </Routes>
   )
 }

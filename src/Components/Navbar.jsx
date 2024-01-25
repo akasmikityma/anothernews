@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import { Home } from './Home.jsx';
-// import fetch_news from './Fetcher.js';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
 export default function Navbar() {
-   const [input, setinput] = useState('');
+  const [input, setInput] = useState('');
+  // const navigate=useParams();
   return (
     <div className='bg-slate-800  text-white'>
         <div className=' flex justify-between items-center mx-14 p-8'>
@@ -21,14 +22,18 @@ export default function Navbar() {
             </div>
             <div className='flex items-center gap-2'>
             <input type="text" name="category" id="" placeholder='type category' className='border-red-950 text-black rounded w-48 h-8 text-center' onChange={(e)=>{
-              e.preventDefault();
-              var value=e.target.value;
-              setinput(value);
+               e.preventDefault();
+               var value = e.target.value;
+              //  onInputChange(value);
+               setInput(value);
             }}/>
-            <button className='rounded border bg-slate-300 p-1 w-10 h-8 text-center text-black 'onClick={()=>{
-              // var khobor=fetch_news(input);
-              // setarticles(khobor.articles);
+           
+          <Link to={`/${input}`}>
+          <button className='rounded border bg-slate-300 p-1 w-10 h-8 text-center text-black 'onClick={()=>{
+              console.log(input)
+              // navigate(`/${input}`)
             }}>go</button>
+          </Link>
             </div>
         </div>
     </div>
