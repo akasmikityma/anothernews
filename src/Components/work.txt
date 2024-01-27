@@ -14,4 +14,9 @@ and then as per the user input that category changes so the fetchNews method get
 
   check git status > git add . > git commit -m "" > git push  thats it >>
 
-  
+  //Searh and options : using navigation and Link the categories and the inputs are sent to the url as parameters and from there 
+  home is using that params and putting that into the api and the results are changing ..
+   
+   also in the dependency array i put the category/param so every time that value changes useEffect runs again and new frech 
+   results come up as per the desire
+   

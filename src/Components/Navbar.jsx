@@ -14,7 +14,11 @@ export default function Navbar() {
     <nav>
     <div className='bg-slate-800  text-white'>
         <div className=' flex justify-between items-center mx-14 p-8'>
-            <h1 className='text-lg'>Navbar</h1>
+            <h1 className='text-lg'>
+              <Link to={"/"}>
+                <button>home</button>
+              </Link>
+            </h1>
             <div className='text-lg'>
             <div>
       <label htmlFor="dropdown">Choose a Category: </label>
@@ -24,8 +28,8 @@ export default function Navbar() {
         className='text-black rounded'
         onChange={handleCategoryChange}
       >
-        <option value="Health" className='text-black'>Health</option>
         <option value="Business" className='text-black'>Business</option>
+        <option value="Health" className='text-black'>Health</option>
         <option value="Sports" className='text-black'>Sports</option>
         <option value="Politics" className='text-black'>Politics</option>
         <option value="Technology" className='text-black'>Technology</option>
