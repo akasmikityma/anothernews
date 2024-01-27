@@ -8,3 +8,10 @@ so when i tried to make input based call that home page kind of crashed so first
 and then as per the user input that category changes so the fetchNews method gets called inside the useEffect with category as a de
 -pendency on the array .... may be that works ,, then i do the open source bootcamp 2 and then i do some dsa and then some job searching 
  and then create another thing or nothing 
+
+
+ by the way  to push the changes to the repo >>
+
+  check git status > git add . > git commit -m "" > git push  thats it >>
+
+  

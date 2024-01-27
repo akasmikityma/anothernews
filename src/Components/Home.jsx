@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from './Navbar';
 import SingleCard from './SingleCard';
 import { useState,useEffect } from 'react'
 import { useParams } from 'react-router-dom';
@@ -18,10 +19,10 @@ export const Home = () => {
         }
         //call the function 
         fetch_news();
-      },[])
+      },[category])
   return (
     <div>
-      
+      <Navbar/>
         <div className='bg-slate-400 min-h-screen '>
       <div className='grid grid-cols-3 grid-rows-4 gap-5 ml-11 p-5'>
          {fetchedarticles&&fetchedarticles.map((item,index)=>(
